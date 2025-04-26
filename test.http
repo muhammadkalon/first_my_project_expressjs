@@ -1,0 +1,12 @@
+GET http://localhost:3030/users
+
+###
+POST http://localhost:3030/registor
+
+Content-type : application/json
+{
+    "name": "soll",
+    "age": "22",
+    "email": "xayr",
+    "password": "213"
+}
