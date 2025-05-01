@@ -1,18 +1,20 @@
 import router from "../router/cors_router";
 import {
-  userValidation,
+  userValidationPost,
   userValidationPut,
   userValidationLogin,
   userValidationDelete,
+
 } from "../validation/user.validetion";
 
-router.post("/registor", async (req, res) => {
-  const { error } = userValidation(req.body);
-  res.status(201).send("Foydalanuvchi qo'shildi");
+router.post("/login", async (req, res) => {
+  const { error } = userValidationLogin(req.body);
   if (error) {
     return res.status(400).json({ message: error.details[0].message });
   }
+  res.status(200).send("Foydalanuvchi kiritildi");
 });
+
 
 router.put("/userput", async (req, res) => {
   const { error } = userValidationPut(req.body);
@@ -21,8 +23,9 @@ router.put("/userput", async (req, res) => {
     return res.status(400).json({ message: error.details[0].message });
   }
 });
-router.post("/login", async (req, res) => {
-  const { error } = userValidationLogin(req.body);
+
+router.post("/register", async (req, res) => {
+  const { error } = userValidationPost(req.body);
   res.status(201).send("Foydalanuvchi qo'shildi");
   if (error) {
     return res.status(400).json({ message: error.details[0].message });

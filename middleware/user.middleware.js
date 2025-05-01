@@ -1,4 +1,4 @@
-import  {userValidation, userValidationPut, userValidationLogin, userValidationDelete}  from "../validation/user.validetion.js";
+import  {userValidationPost, userValidationPut, userValidationLogin, userValidationDelete}  from "../validation/user.validetion.js";
 
 export const userMiddleware_login = function (req, res, next)  {
   const { error } = userValidationLogin(req.body);
@@ -11,7 +11,7 @@ next()
 }
 
 export const userMiddleware = function (req, res, next)  {
-    const { error } = userValidation(req.body);
+    const { error } = userValidationPost(req.body);
   
     if (error) {
       console.log(error);

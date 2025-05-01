@@ -9,7 +9,7 @@ import userPlus from "./router/userPlus.router.js";
 
 
 const app = express();
-const port = process.env.PORT || 2020;
+const port = process.env.PORT || 3030;
 
 
 
@@ -28,5 +28,5 @@ app.use(router);
 app.use(userPlus);
 
 app.listen(port, () => {
-  console.log(`Server ishlayapti ${port}`);
+  console.log(`Server ishlayapti http://localhost:${port}`);
 });

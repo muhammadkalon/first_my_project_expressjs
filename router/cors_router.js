@@ -2,7 +2,6 @@ import express from "express";
 
 import  {userMiddleware, userMiddleware_put, userMiddleware_login, userMiddleware_delete}  from "../middleware/user.middleware.js";
 import control from "../controller/control.js";
-import user from "../controller/control.js";
 import { userValidationLogin } from "../validation/user.validetion.js";
 
 
@@ -48,23 +47,18 @@ const router = express.Router();
  * @swagger
  * /registor:
  *   post:
- *     summary: Create a new user
- *     tags: [Users]
- *     requestBody:
- *       required: true
- *       content:
- *          application/json:
- *             schema:
- *               $ref: '#/components/schemas/User'
- *       responses:
-*         200:
-*           description: The user was successfully created
-*           content:    
-*             application/json:
-*               schema:
-*                 $ref: '#/components/schemas/User'
-*         500:    
-*           description: Some server error   
+*     summary: Yangi User qo'shish
+   *     tags: [product]
+   *     requestBody:
+   *       required: true
+   *       content:
+   *         application/json:
+   *           $ref: '#/components/schemas/Product'
+   *     responses:
+   *       201:
+   *         description: Muvaffaqiyatli yaratildi
+   *       400:
+   *         description: Noto'g'ri ma'lumot 
  */
 router
   .post("/registor",userMiddleware, control.POST)
@@ -95,7 +89,7 @@ router
    *       400:
    *         description: Noto'g'ri ma'lumot
    */
-  .post("/login", control.POSTLOGIN);
+  .post("/login",userMiddleware_login, control.POSTLOGIN);
 /**
  * @swagger
  * /users:

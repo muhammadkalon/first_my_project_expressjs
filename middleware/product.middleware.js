@@ -1,7 +1,7 @@
-import {productValidation, productValidationPut, productValidationDelete} from "../validation/product.validetion.js";
+import {productValidationPost, productValidationPut, productValidationDelete} from "../validation/product.validetion.js";
 
 export const productMiddleware = function (req, res, next)  {
-        const { error } = productValidation(req.body);
+        const { error } = productValidationPost(req.body);
         
         if (error) {
             console.log(error);

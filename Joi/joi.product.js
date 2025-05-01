@@ -1,12 +1,12 @@
 import router from "../router/userPlus.router";
 import {
-  productValidation,
+  productValidationPost,
   productValidationPut,
   productValidationDelete,
 } from "../validation/product.validetion";
 
 router.post("/userPlusProduct", async (req, res) => {
-  const { error } = productValidation(req.body);
+  const { error } = productValidationPost(req.body);
   res.status(201).send("Maxsulot qo'shildi");
   if (error) {
     return res.status(400).json({ message: error.details[0].message });

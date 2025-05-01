@@ -1,8 +1,8 @@
 import Joi from "joi";
 
-export const productValidation = (data) => {
+export const productValidationPost = (data) => {
     const schema = Joi.object({
-
+        userPlus_id: Joi.string().required(),
         productCategory: Joi.string().min(3).required(),
         ptype: Joi.string().min(3).required(),
         name: Joi.string().min(3).required(),

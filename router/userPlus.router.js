@@ -10,12 +10,16 @@ const router = exspress.Router();
  *     Product:
  *       type: object
  *       required:
+ *         - userPlus_id
  *         - productCategory
  *         - ptype
  *         - name
  *         - price
  *         - description
  *       properties:
+ *         userPlus_id:
+ *           type: string
+ *           description: Foydalanuvchi ID si
  *         productCategory:
  *           type: string
  *           description: maxsulot kategoriyasi
@@ -32,6 +36,7 @@ const router = exspress.Router();
  *           type: string
  *           description: maxsulot haqida ma'lumot
  *       example:
+ *         userPlus_id: c58a2bd5-2073-4e32-bd41-9e7bfb5dc878
  *         productCategory: telefon
  *         ptype: Redmi
  *         name: redmi 9

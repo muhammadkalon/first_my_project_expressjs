@@ -19,5 +19,33 @@
     "age": "17",
     "email": "Dom@mail.com",
     "password": "123456"
+  },
+  {
+    "id": "b6fe1d44-d980-48f3-81d9-ec3d3beceb17",
+    "name": "rew",
+    "age": "78",
+    "email": "nolan@gmail.com",
+    "password": "123"
+  },
+  {
+    "id": "eea49091-a153-49be-bad7-29e016d00d82",
+    "name": "dyftu",
+    "age": "12",
+    "email": "mckdm@gmail.com",
+    "password": "123"
+  },
+  {
+    "id": "0ba61134-32e3-4a52-a986-40a6bcedfc16",
+    "name": "logan",
+    "age": "123",
+    "email": "mckdm",
+    "password": "123"
+  },
+  {
+    "id": "a2bdcf9e-585c-4289-be28-6e1d7b997a67",
+    "name": "logan",
+    "age": "45",
+    "email": "Dodwdwwde@mail.ru",
+    "password": "456"
   }
 ]

@@ -11,14 +11,14 @@ const userPlus = {
   POST: (req, res) => {
     const new_product = req.body
     const userPlus = read_file("users.json");
-    const user_find = userPlus.find((user) => user.id === new_product.id);
+    const user_find = userPlus.find((user) => user.id === new_product.userPlus_id);
     const Product = read_file("Product.json");
     const uuid = uuidv4();
-    console.log(user_find.email, "siz malumot qo'shmoqchisiz");
+    
 if (user_find) {
   
   Product.push({
-    userPlus_id: new_product,
+    userPlus_id: new_product.userPlus_id,
     id: uuid,
     productCategory:  new_product.prductproductCategory,
     ptype:  new_product.ptype,
