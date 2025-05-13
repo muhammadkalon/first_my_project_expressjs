@@ -37,6 +37,7 @@ const router = exspress.Router();
  *           description: maxsulot haqida ma'lumot
  *       example:
  *         userPlus_id: c58a2bd5-2073-4e32-bd41-9e7bfb5dc878
+ *         Product_id: 5bba4659-2f79-4cf6-a954-5c41ae92c74e
  *         productCategory: telefon
  *         ptype: Redmi
  *         name: redmi 9
@@ -115,14 +116,18 @@ router.get("/userPlusGET", userPlus.GET)
  *           schema:
  *             type: object
  *             required:
- *               - id
+ *               - userpPlus_id
+ *               - Product_id
  *               - productCategory
  *               - ptype
  *               - name
  *               - price
  *               - description
  *             properties:
- *               id:
+ *               userpPlus_id:
+ *                 type: string 
+ *                 description: maqxsulotning egasini id disi 
+ *               Product_id:
  *                 type: string
  *                 description: maxsulotni id si
  *               productCategory:
@@ -157,7 +162,7 @@ router.put("/productUpdate", product_middleware_put, userPlus.PUT)
  *     tags: [UserPlus]
  *     parameters:
  *      - in: path
- *        name: id
+ *        name: Product_id
  *        schema:
  *          type: string
  *        required: true

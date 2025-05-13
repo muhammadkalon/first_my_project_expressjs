@@ -14,7 +14,8 @@ export const productValidationPost = (data) => {
 
 export const productValidationPut = (data) => {
     const schema = Joi.object({
-        id: Joi.string().required(),
+        userPlus_id: Joi.string().required(),
+        Product_id: Joi.string().required(),
         productCategory: Joi.string().min(3).required(),
         ptype: Joi.string().min(3).required(),
         name: Joi.string().min(3).required(),
@@ -26,7 +27,7 @@ export const productValidationPut = (data) => {
 
 export const productValidationDelete = (data) => {
     const schema = Joi.object({
-        id: Joi.string().required(),
+        Product_id: Joi.string().required(),
     });
     return schema.validate(data);
 }
