@@ -38,7 +38,7 @@ const user = {
     );
 
     console.log(user.id, user.email, "kirdi");
-    return res.json({ token });
+    return res.json({ token ,userPlus_id:user.id});
   },
 
   POST: (req, res) => {
