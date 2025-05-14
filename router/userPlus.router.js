@@ -49,7 +49,7 @@ const router = exspress.Router();
  * @swagger
  * /userPlusProduct:
  *   post:
-   *     summary: Yangi User qo'shish
+   *     summary: Yangi maxsulot qo'shish
    *     tags: [product]
    *     requestBody:
    *       required: true
@@ -68,8 +68,8 @@ router.post("/userPlusProduct",productMiddleware, userPlus.POST)
  * @swagger
  * /userPlusGET:
  *  get:
- *    summary: Barcha UserPlus ma'lumotlarini olish
- *    tags: [UserPlus]
+ *    summary: Barcha maxsulotlarini olish
+ *    tags: [product]
  *    responses:
  *      200:
  *        description: Muvaffaqiyatli ma'lumotlar olindi
@@ -107,8 +107,8 @@ router.get("/userPlusGET", userPlus.GET)
  * @swagger
  * /productUpdate:
  *   put:
- *     summary: UserPlus ma'lumotlarini yangilash
- *     tags: [UserPlus]
+ *     summary: maxsulotni yangilash
+ *     tags: [product]
  *     requestBody:
  *       required: true
  *       content:
@@ -158,8 +158,8 @@ router.put("/productUpdate", product_middleware_put, userPlus.PUT)
  * @swagger
  * /userPlusDELETE:
  *   delete:
- *     summary: UserPlus ma'lumotlarini o'chirish
- *     tags: [UserPlus]
+ *     summary: maxsulotni o'chirish
+ *     tags: [product]
  *     parameters:
  *      - in: path
  *        name: Product_id

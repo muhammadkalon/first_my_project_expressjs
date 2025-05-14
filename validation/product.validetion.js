@@ -32,7 +32,6 @@ export const productValidationDelete = (data) => {
     return schema.validate(data);
 }
 
-// export default {productValidation ,productValidationPut }
 
 
 

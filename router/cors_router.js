@@ -2,7 +2,6 @@ import express from "express";
 
 import  {userMiddleware, userMiddleware_put, userMiddleware_login, userMiddleware_delete}  from "../middleware/user.middleware.js";
 import control from "../controller/control.js";
-import { userValidationLogin } from "../validation/user.validetion.js";
 
 
 const router = express.Router();
@@ -48,7 +47,7 @@ const router = express.Router();
  * /registor:
  *   post:
 *     summary: Yangi User qo'shish
-   *     tags: [product]
+   *     tags: [User]
    *     requestBody:
    *       required: true
    *       content:
@@ -94,8 +93,8 @@ router
  * @swagger
  * /users:
  *  get:
- *     summary: Barcha UserPlus ma'lumotlarini olish
- *     tags: [UserPlus]
+ *     summary: Barcha foydalanuvchi ma'lumotlarini olish
+ *     tags: [User]
  *     responses:
  *       200:
  *         description: Muvaffaqiyatli ma'lumotlar olindi
@@ -128,8 +127,8 @@ router.get("/users", control.GET)
  * @swagger
  * /userput:
  *   put:
- *     summary: UserPlus ma'lumotlarini yangilash
- *     tags: [UserPlus]
+ *     summary: Foydalanuvchi ma'lumotlarini yangilash yoki o'zgartirish
+ *     tags: [User]
  *     requestBody:
  *       required: true
  *       content:
@@ -187,8 +186,8 @@ router.put("/userput", userMiddleware_put,control.PUT)
  * @swagger
  * /userdelete:
  *   delete:
- *     summary: UserPlus ma'lumotlarini o'chirish
- *     tags: [UserPlus]
+ *     summary: foydalanuvchi ma'lumotlarini o'chirish
+ *     tags: [User]
  *     requestBody:
  *       required: true
  *       content:
